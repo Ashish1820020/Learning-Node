@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 
 // constants
 const port = 3000;
-const apiKey = "83046c2b1189824b103e060789d2b6f3"; 
 const unit = "metric";
 
 
