@@ -1,0 +1,29 @@
+<%- include("header") -%>
+    <div class="container">
+            <div class="card" id="header">
+                <h1><%= value %></h1>
+            </div>
+
+        <div class="box-container">
+                <div class="box">
+                    <ul>
+                        <% listArray.map((item)=>{%>
+                        <form method="post" action="/delete">
+                            <li> 
+                                <div class="card">
+                                    <input type="checkbox" name="checkbox" class="check-box" value="<%=item._id%>" onChange="this.form.submit()">
+                                    <p> <%= item.task %> </p>
+                                </div>
+                            </li> 
+                        </form>
+                        <% }) %>
+                    </ul>
+                </div>
+                <form method="post" action="/"  class="card" id="form">
+                    <input type="text" class="input" name="work" placeholder="Enter Task">
+                    <button class="btn" type="submit" >Add Task</button>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
